@@ -1,0 +1,133 @@
+/* Стили к header-------------------------------------- */
+.logo_img{
+  width: 70px;
+}
+.user_img{
+  height: 50px;
+}
+.header_container{
+  background-color: #ef89b5;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0 9px 50px #ef89b5;
+
+}
+.header_container_info{
+  width: 90%;
+  max-width: 1920px;
+  display: flex;
+  justify-content: center;
+}
+.header_list{
+  list-style: none;
+}
+
+
+.header_list li a{
+  text-decoration: none;
+  color: black;
+  font-size: 2vh;
+  font-weight: 600;
+}
+
+/* БУРГЕР-КНОПКА */
+.burger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  z-index: 5;
+  padding: 0;
+}
+
+.burger span {
+  display: block;
+  width: 28px;
+  height: 3px;
+  background-color: #000;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.burger span:nth-child(1) {
+  top: 0;
+}
+
+.burger span:nth-child(2) {
+  margin: 6px 0;
+}
+
+.burger span:nth-child(3) {
+  bottom: 0;
+}
+
+/* Анимация при открытии */
+.burger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.burger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.burger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+
+.header_list .header_list_item{
+  color: #ffffff;
+}
+.header_list .header_list_item:hover{
+  color: #000000;
+  transition: .5s;
+
+}
+
+
+
+
+/* Стили к main-------------------------------------- */
+
+main{
+  max-width: 1920px;
+  margin: 0 auto;
+
+}
+
+.main_par{
+  font-size: 38px;
+  text-align: justify;
+  text-indent: 70px;
+}
+
+.WorldMTO{
+  font-size: 43px;
+  color: #ef89b5;
+  font-weight: 700;
+}
+
+.btn-outline {
+  width:350px;
+  height: 80px;
+  border-radius: 20px;
+  background-color: transparent;
+  border: 2px solid #ef89b5;
+  color: black;
+  font-size: 20px;
+}
+
+.btn-outline:hover {
+  background-color: #ef89b5;
+  color: #ffffff;
+  transition-duration: .5s;
+  box-shadow: 0 8px 10px rgba(239, 137, 181, 0.5);
+}
+
