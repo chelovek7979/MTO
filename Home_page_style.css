@@ -22,7 +22,9 @@
   list-style: none;
   position: relative;
 }
-
+.logo_word{
+  font-family: 'Bounded-black'
+}
 
 
 .header_list li a{
@@ -46,6 +48,7 @@
   position: relative;
   z-index: 5;
   padding: 0;
+  
 }
 
 .burger span {
@@ -87,6 +90,7 @@
 
 .header_list .header_list_item{
   color: #ffffff;
+  font-family: 'Bounded-ExtraLight';
 }
 .header_list .header_list_item:hover{
   color: #000000;
@@ -144,15 +148,18 @@ main{
 }
 
 .main_par{
-  font-size: 38px;
+  font-size: 35px;
   text-align: justify;
-  text-indent: 70px;
+  text-indent: 100px;
+  font-family: 'Bounded-ExtraLight';
+  
 }
 
 .WorldMTO{
   font-size: 43px;
   color: #ef89b5;
   font-weight: 700;
+  font-family: 'Bounded-regular'
 }
 
 .btn-outline {
@@ -163,6 +170,7 @@ main{
   border: 2px solid #ef89b5;
   color: black;
   font-size: 20px;
+  font-family: 'Bounded-Regular';
 }
 
 .btn-outline:hover {
