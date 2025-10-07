@@ -153,6 +153,12 @@ main{
   text-indent: 100px;
   font-family: 'Bounded-ExtraLight';
   
+
+  
+}
+
+.container-fluid-text{
+  width: 75%;
 }
 
 .WorldMTO{

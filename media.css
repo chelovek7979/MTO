@@ -69,8 +69,22 @@ font-size: 20px;
 }
 @media(max-width:900px){
   .main_par{
-  font-size: 28px;
+  font-size: 2rem;
+  /* text-align: center; */
+}
+/* .container-fluid-text{
+  width: 75%;
+} */
+}
+
+@media(max-width:576px){
+  .main_par{
+  font-size: 1.3rem;
+}
+.WorldMTO{
+  font-size: 24px;
+  text-indent: 0;
+};
+
 
 }
-}
-
