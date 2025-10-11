@@ -1,3 +1,10 @@
+body{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
 /* Стили к header-------------------------------------- */
 .logo_img{
   width: 70px;
@@ -10,7 +17,6 @@
   display: flex;
   justify-content: center;
   box-shadow: 0 9px 50px #ef89b5;
-
 }
 .header_container_info{
   width: 90%;
@@ -25,8 +31,6 @@
 .logo_word{
   font-family: 'Bounded-black'
 }
-
-
 .header_list li a{
   text-decoration: none;
   color: rgb(255, 255, 255);
@@ -50,7 +54,6 @@
   padding: 0;
   
 }
-
 .burger span {
   display: block;
   width: 28px;
@@ -60,34 +63,25 @@
   transition: all 0.3s ease;
   position: relative;
 }
-
 .burger span:nth-child(1) {
   top: 0;
 }
-
 .burger span:nth-child(2) {
   margin: 6px 0;
 }
-
 .burger span:nth-child(3) {
   bottom: 0;
 }
-
-
 /* Анимация при открытии */
 .burger.active span:nth-child(1) {
   transform: rotate(45deg) translate(5px, 5px);
 }
-
 .burger.active span:nth-child(2) {
   opacity: 0;
 }
-
 .burger.active span:nth-child(3) {
   transform: rotate(-45deg) translate(6px, -6px);
 }
-
-
 .header_list .header_list_item{
   color: #ffffff;
   font-family: 'Bounded-ExtraLight';
@@ -95,9 +89,7 @@
 .header_list .header_list_item:hover{
   color: #000000;
   transition: .5s;
-
 }
-
 .sub_header_list {
   list-style-type: none;
   padding: 0;
@@ -105,69 +97,50 @@
   position: absolute;
   display: none; 
 }
-
 .bacome_special {
   display: block; 
   color: #ffffff;
-  
-  
 }
 
 .menu_item:hover .sub_header_list {
   display: block; 
   color: #ffffff;
 }
-
 .bacome_player {
   display: flex;
   align-items: center;
   gap: 5px;
 }
-
 .arrow {
   transition: transform 0.3s ease;
 }
-
 .menu_item:hover .arrow {
   transform: rotate(180deg);
 }
-
 .burger_menu{
   display: none;
 }
-
-
-
-
 /* Стили к main-------------------------------------- */
-
 main{
+  width: 90%;
   max-width: 1920px;
   margin: 0 auto;
-
 }
-
 .main_par{
   font-size: 35px;
   text-align: justify;
   text-indent: 100px;
   font-family: 'Bounded-ExtraLight';
-  
-
-  
 }
-
 .container-fluid-text{
   width: 75%;
 }
-
 .WorldMTO{
   font-size: 43px;
   color: #ef89b5;
   font-weight: 700;
   font-family: 'Bounded-regular'
 }
-
 .btn-outline {
   width:350px;
   height: 80px;
@@ -178,11 +151,25 @@ main{
   font-size: 20px;
   font-family: 'Bounded-Regular';
 }
-
 .btn-outline:hover {
   background-color: #ef89b5;
   color: #ffffff;
   transition-duration: .5s;
   box-shadow: 0 8px 10px rgba(239, 137, 181, 0.5);
 }
+/* РАБОТА НАД СВАЙПЕРОМ------------------------------------------- */
+.swiper {
+  width: 100%;
+  height: 500px;
+}
+
+.swiper-slide img{
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover;
+  border-radius: 20px;
+  
+}
+
+
 
