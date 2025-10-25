@@ -1,37 +1,38 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const burgerButton = document.getElementById("burger-button");
-  const menu = document.getElementById("menu");
+const part = document.querySelector('[dats-js-part]');
+const popup = document.getElementById('popup');
+const popupClose = document.getElementById('popupClose');
+const popupOverlay = document.querySelector('.popup__overlay');
 
-  burgerButton.addEventListener("click", () => {
-    menu.classList.toggle("active");
-    burgerButton.classList.toggle("active");
-  });
+part.addEventListener('click', (e) => {
+  e.preventDefault();
+  popup.classList.add('active');
 });
 
-/* Настройка Свайпера */
-const swiper = new Swiper('.swiper', {
-  
-  
-  loop: true,
-  spaceBetween: 50,
-  speed: 1000,
-  autoplay: {
-  delay: 2000,
- },
+popupClose.addEventListener('click', () => {
+  popup.classList.remove('active');
+});
 
-  
-  pagination: {
-    el: '.swiper-pagination',
-  },
+popupOverlay.addEventListener('click', () => {
+  popup.classList.remove('active');
+});
 
-  
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
 
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const burger = document.querySelector("[data-js-burger]");
+  const menu = document.querySelector(".header__title-nav");
   
-  scrollbar: {
-    el: '.swiper-scrollbar',
-  },
+
+  // Открытие/закрытие меню
+  burger.addEventListener("click", () => {
+    menu.classList.toggle("active");
+    burger.classList.toggle("active");
+  });
+
+  // Клик по затемнению — закрыть меню
+  overlay.addEventListener("click", () => {
+    menu.classList.remove("active");
+    
+  });
 });

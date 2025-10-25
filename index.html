@@ -5,124 +5,169 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Молодёжное творческое обьединение</title>
     <link rel="icon" href="./Image/lotus.png">
-    <link rel="stylesheet" href="./bootstrap-5.3.8-dist/css/bootstrap.min.css">
-    <script src="./bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js" defer></script>
     <script src="./Home_page_style.js" defer></script>
     <link rel="stylesheet" href="./Home_page_style.css">
-    <link rel="stylesheet" href="./media.css">
     <link rel="stylesheet" href="./style-font.css">
     <link rel="stylesheet" href="/swiper/swiper-bundle.css">
-    <script src="/swiper/swiper-bundle.js"></script>
+    <link rel="stylesheet" href="./media.css">
 </head>
+
 <body>
     <header>
-        <nav class="container-fluid  header_container p-0">
-            <div class="row header_container_info d-flex justify-content-between align-items-center py-3">
-                
-                <div class="col-2 p-0 d-flex gap-3 align-items-center">
-                    <img src="./Image/lotus.png" alt="Логотип МТО" class="logo_img">
-                    <h1 class="m-0 logo_word">МТО</h1>
+        <video autoplay muted loop playsinline class="header__bg-video">
+            <source src="/video/vecteezy_blurred-lights-of-stage-with-laser-rays-light-concert-loop_8813014.mp4" type="video/mp4">
+        </video>
+        <nav class="header__title">
+            <div class="header__title-logo">
+                <img src="./Image/header-logo.png" alt="">
+            </div>
+            <div class="header__title-nav">
+                <ul>
+                    <li>
+                        <a href="">Отделения</a>
+                    </li>
+                    <li>
+                        <a href="" dats-js-part>Стать частью МТО</a>
+                    </li>
+                    <li>
+                        <a href="">О компании</a>
+                    </li>
+                    <li class="header__title-nav-pofile">
+                        <a href="">Профиль</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="header__title-profile">
+                <div class="burger" id="burger" data-js-burger>
+                    <span></span>
+                    <span></span>
                 </div>
-
-                
-                <div class="col-8 p-0 position-relative">
-                    <ul id="menu" class="d-flex gap-2 gap-xl-5 float-end header_list m-0">
-                        <li class="menu_item"><a href="" class="header_list_item">Отделения</a></li>
-                        <li class="menu_item">
-                            <a href="" class="header_list_item bacome_player">Стать участником
-                                <svg class="arrow" width="10" height="6" viewBox="0 0 10 6" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" fill="none"/>
-                                </svg>
-                            </a>
-                            <ul class="sub_header_list">
-                                <li><a href="" class="bacome_special header_list_item ">Стать специалистом</a></li>
-                            </ul>
-                        </li>
-                        <li class="menu_item"><a href="" class="header_list_item">О компании</a></li>
-                        <li><a href="" class="bacome_special header_list_item burger_menu menu_item">Стать специалистом</a></li>
-                    </ul>
-                </div>
-                
-                <div class="col-2 p-0 d-flex justify-content-end align-items-center gap-3">
-                    <button class="burger" id="burger-button" aria-label="Меню">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </button>
-
-                    <a href="">
-                        <img src="./Image/user.png" class="user_img" alt="Профиль">
-                    </a>
-                </div>
+                <img src="./Image/header-user.png" alt="" class="header__title-profile-item">
             </div>
         </nav>
-    </header>
-
-    <main class="mt-5 ">
-        <div class="container-fluid p-0">
-            <div class="row w-75  mx-auto ">
-                <div class="col-12 p-0">
-                    <p class="main_par "><span class="WorldMTO">МТО</span> - это Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis facere voluptatem, ducimus cupiditate perspiciatis in exercitationem molestiae </p>
-                </div>
+        <div class="header__hero">
+            <div class="header__hero-title">
+                <h1>МТО</h1>
             </div>
-
-            <div class="row  my-2 my-md-5 text-center px-0  px-xl-5" >
-                <div class="col-12 col-lg-4 mb-3 col-xl-4 p-0">
-                    <button class="btn-outline w-75 w-lg-auto">Ближайшие мероприятия</button>
-                </div>
-                <div class="col-12 col-lg-4  mb-3 col-xl-4 p-0">
-                    <button class="btn-outline w-75 w-lg-auto">Крупные проекты</button>
-                </div>
-                <div class="col-12 col-lg-4 col-xl-4 p-0">
-                    <button class="btn-outline w-75 w-lg-auto">Стать участником</button>
-                </div>
-            </div>
-        </div> 
-
-        <div class="mt-5">
-            <h1 class="text-center WorldMTO">Участнкиам МТО</h1>
-            <div class="container-fluid ">
-                <div class="row border ">
-                    <div class="col-12 col-md-8 p-0">
-                        <h2>Участнки МТО могут быть ваще крутыми</h2>
-                        <ul>
-                            <li>Возможности</li>
-                            <li>Возможности</li>
-                            <li>Возможности</li>
-                            <li>Возможности</li>
-                            <li>Возможности</li>
-                        </ul>
-
-                    </div>
-                    <div class="col-12  col-md-4 p-0 ">
-                        <div class="swiper">
-                            <div class="swiper-wrapper">
-                                <!-- Slides -->
-                                <div class="swiper-slide ">
-                                    <img src="/photo_community/photo_2025-05-24_22-00-13.jpg" alt="">
-                                </div>
-                                <div class="swiper-slide">
-                                    <img src="/photo_community/photo_2025-05-25_22-14-06.jpg" alt="">
-                                </div>
-                                <div class="swiper-slide">
-                                    <img src="/photo_community/photo_2025-09-14_18-43-49.jpg" alt="">
-                                </div>
-                                
-                            </div>
-                            
-                            <!-- <div class="swiper-button-prev"></div>
-                            <div class="swiper-button-next"></div> -->
-
-                            </div>
-                    </div>
-                </div>
+            <hr>
+            <div class="header__hero-subtitle">
+                <p>Это пространство для творчества</p>
             </div>
         </div>
+        <div class="header__buttons">
+            <div class="header__buttons-btn btn1">Ближайшие мероприятия</div>
+            <div class="header__buttons-btn btn2">Стать участником</div>
+            <div class="header__buttons-btn btn3">Крупные проекты</div>
+        </div>
+    </header>
+
+    <main><!-- основная часть страницы -->
+        <section class="description">
+            <div class="main__title ">
+                <div class="main__title-item title-item">Почему именно мы?</div>
+            </div>
+            <div class="description__content">
+                <div class="main__description">
+                    <p class="main__description-item">Мто — это уникальное пространство для творческой молодежи, где каждый может реализовать сввои идеи и потенциал. Мы создаем возможности для развития, обучения и сотрудничества</p>
+                </div>
+                <div class="main__more">
+                    <button class="mian__more-item">Подробнее</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="membership"> <!-- членство -->
+
+            <div class="membership__block membership__block--ych">
+                <div class="membership__block__wrapper">
+                    <div class="membership__block-content">
+                        <div class="membership__block-content-up">
+                            <h1>Участникам МТО</h1>
+                            <ul>
+                                <li>— Помощь в публикации работ</li>
+                                <li>— Площадку для выступлений</li>
+                                <li>— Полезные знакомства</li>
+                            </ul>
+                        </div>
+                        <div class="membership__block-content-down">Стать участником</div>
+                    </div>
+                    <div class="membership__block-photo">
+                        <p>фото</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="membership__block membership__block--reverse">
+                <div class="membership__block__wrapper">
+                    <div class="membership__block-content">
+                        <div class="membership__block-content-up">
+                            <h1>Специалистам МТО</h1>
+                            <ul>
+                                <li>— Развитие Soft и Hard scills</li>
+                                <li>— Возможность реализоваьтся</li>
+                                <li>— Дружный коллектив</li>
+                            </ul>
+                        </div>
+                        <div class="membership__block-content-down">Стать партнёром</div>
+                    </div>
+                    <div class="membership__block-photo">
+                        <p>фото</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="callBack"><!-- обратная связь -->
+            <div class="callBack__title">
+                <div class="title-item callBack__title-item">Остались вопросы?</div>
+            </div>
+            <div class="callBack__area">
+                <div class="callBack__area-wrapper">
+                    <form class="callBack__area-content">
+                        <label for="name">Имя:</label>
+                        <input type="text" id="name" name="name" placeholder="Ваше имя">
+
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" placeholder="you@example.com">
+
+                        <label for="message">Ваш вопрос:</label>
+                        <textarea id="message" name="message" placeholder="Введите сообщение..."></textarea>
+
+                        <div class="buttons">
+                            <button type="submit" class="btn btn--pink">Написать на почту</button>
+                            <button type="button" class="btn btn--blue">
+                                <span>Написать в VK</span>
+                                <img src="./Image/vk.png" alt="">
+                            </button>
+                        </div>
+                    </form>
+                    <div class="callBack__area-img">
+                        <img src="/Image/pushistiy-lotus.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer><!-- Подвал сайта -->
+
+        </footer>
+
 
     </main>
-<br>
-<br>
-<br>
-<br>
+
+
+    <!-- Модалка для стать частью мто -->
+    <div class="popup" id="popup">
+        <div class="popup__overlay"></div>
+        <div class="popup__content">
+            <button class="popup__close" id="popupClose">x</button>
+            <ul class="popup__menu">
+                <li><a href="#">подать заявку как специалист</a></li>
+                <li><a href="#">подать заявку как участник</a></li>
+            </ul>
+        </div>
+    </div>
+
 </body>
+<script src="/swiper/swiper-bundle.js"></script>
 </html>
