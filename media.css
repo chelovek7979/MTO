@@ -1,3 +1,8 @@
+@media (max-width: 1600px) {
+  .mobile-break {
+    display: none;
+  }
+}
 /*______________________________________________________________________Размер окна меньше 1440 пикселей */
 @media(max-width:1440px){
 /*_____________________________Заголовок */
@@ -9,6 +14,8 @@
   width: 96%;
   margin: 140px auto;
 }
+ .membership__block--ych::before {background-size: 160%;}
+ .membership__block--reverse::before {background-size: 250%;}
 
 }
 
@@ -33,6 +40,7 @@
 .header__title-nav.active {
   opacity: 1;
   pointer-events: auto;
+  
 }
 .header__title-nav ul {
 flex-direction: column;
@@ -52,7 +60,7 @@ gap: 0px;
   justify-content: space-between;
   gap: 3%;
 }
-.header__buttons-btn {width: 30%;}
+.header__buttons-btn {width: 46%;}
 .popup__content {
  height: 210px;
 }
@@ -134,18 +142,20 @@ gap: 0px;
     "content-down";
   height: 100%;
   min-height: 700px;
+  background: rgba(66, 65, 65, 0.15);
   backdrop-filter: blur(10px);           
-  -webkit-backdrop-filter: blur(10px);   
-  border: 1px solid rgba(255, 255, 255, 0.3); 
+  -webkit-backdrop-filter: blur(0px);   
+  border: 1px solid rgb(255, 255, 255); 
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); 
   border-radius: 40px;
   padding: 40px;
   gap: 0;
+  
+  
 }
 .membership__block--reverse .membership__block__wrapper {
   height: 100%;
 }
-
 
 
 
@@ -154,28 +164,37 @@ gap: 0px;
 
 .membership__block-content-down {
   grid-area: content-down;
-  border-radius:  40px;
+  border-radius:0 0 40px 40px;
   height: auto;
-  padding: 20px;
   margin: auto;
+}
+.membership__block-content-down button {
+  height: 70px;
 }
 .membership__block-photo {
   grid-area: photo;
   justify-self: center;
   width: 100%;
-  height:100%;
+  height:107%;
   border-radius: 0;
-  
   min-height: 200px;
-  border-radius: 30px;
+  border-radius: 40px 40px 0  0 ;
   overflow: hidden;
   font-size: clamp(2rem, 8vw, 4rem);
 }
+.membership__block--reverse.membership__block-photo {
+  height:107%;
+}
+.callBack__title{
+  width: 100%;
+}
+
 .membership__block--reverse .membership__block__wrapper {
   grid-template-areas:
   "content-up"
   "photo"
   "content-down";
+  gap: 5px;
 }
 .mian__more-item{width: 40%;}
 
@@ -184,11 +203,28 @@ gap: 0px;
   width: 96%;
   margin: 140px auto;
 }
-
+.description-back-second{
+display: none;
+}
 
 
 /*_____________________________Обратная связь */
 .callBack__area-content {width: 100%;}
+.membership__block--ych::before {
+
+ background-size: 300%;
+
+ background-position: top;
+
+}
+.membership__block--reverse::before {
+
+ background-size: 300%;
+
+ background-position: top;
+
+}
+
 }
 
 
@@ -213,19 +249,27 @@ gap: 0px;
 }
 .mian__more-item{
   width: 100%;
-  height: 300%;
+  height: 70px;
+  
+}
+.description__content {
+    gap: 10px;
 }
 .description{
-  height: 100vh;
-  justify-content: center;
-  gap: 50px;
+  min-height: 750px;
+  justify-content:center;
+  gap: 40px;
 }
 
-.main__title{margin: 0 auto;}
+
+.main__title{margin: 0 auto;
+width: 100%;
+}
 .title-item{
   width: auto;
   height: 60px;
   margin: auto;
+  border-radius: 20px;
 }
 /*_____________________________membership__block */
 .membership__block-content-up h1 {text-align: center;}
@@ -278,12 +322,41 @@ input{height: 60px;}
   align-items: center;
   /* margin-top: 30px; */
 }
-.membership__block--ych{
-  background-size: cover;
+.description{
+  margin: 0 auto;
 }
-.membership__block--reverse{
-  background-size: cover;
-  background-size: 100%;
+
+
+
+
+
+
+
+
+
+.description-back-first{
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  /* top: 45%; */
 }
+
+.main__description-item{
+  text-align: left;
+  text-align-last: left;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  word-break: normal;
+  letter-spacing: 0.01em;
+  
+}
+}
+
+
+@media(max-width:325px){
+  .popup__content {
+    height: 310px;
+  }
 
 }

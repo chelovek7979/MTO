@@ -7,7 +7,8 @@
 
 }
 
-a { all: unset; }
+a { color: inherit; text-decoration: none; outline: none; }
+a:focus { outline: 3px solid rgba(255,255,255,0.12); outline-offset: 3px; }
 
 *, *::before, *::after {
   box-sizing: border-box;
@@ -18,7 +19,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color:#828282;
+  background-color:#82828260;
   margin: auto;
   
 }
@@ -188,14 +189,15 @@ hr{
 
 .header__buttons{
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   gap: 4%;
   
 }
 .header__buttons-btn{
   background-color: var(--white);
-  width: 23%;
+  width: 70%;
+  margin: 0 2%;
   height: 93px;
   border-radius: 30px;
   display: flex;
@@ -204,6 +206,13 @@ hr{
   font-family: 'Bounded-Regular';
   font-size: clamp(1rem,1vw + 0.5rem ,1.5rem);
   text-align: center;
+  transition: ease .4s;
+  cursor: pointer;
+}
+.header__buttons-btn:hover{
+background-color: var(--pink);
+color: var(--white);
+
 }
 /* _______________________________________________________________________________________ Стили к main */
 .description{
@@ -211,15 +220,24 @@ hr{
   min-height: 800px;
   display: flex;
   flex-direction: column;
-  /* margin: 0 2%; */
+  
   justify-content: space-around;
   max-width: 1840px ;
   padding: 0 2%;
-  margin: auto;
-
+  margin:  50px auto 0;
+  position: relative;
+  /* border: 1px solid  #0077ff; */
+}
+.description-back-first{
+  position: absolute;
+  z-index: -1;
+  width: 55%;
+}
+.description-back-first img{
+  max-width: 100%;
+  height: auto;
+  display: block;
   
-  
-
 }
 
 .main__title{
@@ -231,25 +249,34 @@ hr{
   margin: 0 7%;
   font-family: 'Bounded-Regular';
   line-height: 126%;
-  text-align: justify;
+  text-align: left;
+  /* word-spacing: -0.4ex; */
+  
+  
+  
+}
+.mobile-break {
+  display: inline;
 }
 
+
 .main__description{
-  background: rgba(255, 255, 255, 0.15);
+    background: rgba(66, 65, 65, 0.15);
   backdrop-filter: blur(10px);           
   -webkit-backdrop-filter: blur(10px);   
   border: 1px solid rgba(255, 255, 255, 0.3); 
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);  
-  padding: 7% 0;
+  padding: 3% 0;
   border-radius: 40px;
+  
 }
 .title-item{
   width: 100%;
   height: 84px;
-  background:var(--pink);
+  background:#1b1d1e;
   border: 1px solid rgba(255, 255, 255, 0.3); 
-  box-shadow: 0 4px 30px rgba(255, 253, 253, 0.438);   
-  border-radius:20px;
+  box-shadow: 0 20px 30px rgba(255, 253, 253, 0.438);   
+  border-radius:30px;
   font-size: clamp(1rem,1.5vw + 0.5rem ,2rem);
   font-family: 'Bounded-Regular';
   display: flex;
@@ -261,17 +288,25 @@ hr{
 
 
 .mian__more-item{
-
   border-radius: 40px;
   background-color: var(--white);
-  /* padding: 0 5%; */
+  
   width: 25%;
   height: 80px;
   border: none;
   color: var(--black);
   font-size: clamp(1rem,1.5vw + 0.5rem ,2rem);
   font-family: 'Bounded-ExtraLight';
+  cursor: pointer;
+  transition: ease .4s;
   
+}
+.mian__more-item:hover{
+  
+  background-color: var(--pink);
+  color: var(--white);
+  
+ 
 }
 .description__content{
   display: flex;
@@ -296,35 +331,42 @@ hr{
   display: flex;
   justify-content: space-around;
   align-items: center;
-  
-  /* margin-top: 30px; */
+  position: relative;
+
 }
-/* .membership__block--ych{
-  border: 1px solid rgb(0, 255, 0);
-}
-.membership__block--reverse{
-  border: 1px solid rgb(165, 14, 179);
-} */
-.membership__block--ych,
-.membership__block--reverse{
-  background-image: url(./Image/SVG/Pinck-snake-ych.svg);
-  background-size: 170%;
-  background-position: center ;
+
+ .membership__block--ych::before,
+  .membership__block--reverse::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("./Image/snake1.png") center/cover no-repeat;
+  z-index: 0;
+  background-size: 130%;
   background-repeat: no-repeat;
-  
-  /* background-size: cover; */
+  background-position: center;
+
 }
-.membership__block--reverse{
-  background-image: url(./Image/SVG/Pinck-snake-reverse.svg);
+.membership__block--reverse::before{
+  background: url("./Image/SVG/Pinck-snake-reverse.svg") center/cover no-repeat;
+  background-size: 170%;
 }
+
+
+
+
+
+
+
 
 .membership__block__wrapper{
   display: grid;
-  grid-template-columns: 3fr 2fr;
+  grid-template-columns: 60% 40%;
   grid-template-rows: 1fr;
   gap: 20px;
   /* height: 600px; */
   width: 96%;
+  z-index: 1;
   
   
 }
@@ -332,14 +374,14 @@ hr{
 .membership__block-content {
   grid-row: 1 / 2;
   grid-column: 1 / 2;
-  background-color: var(--white);
+  
   border-radius: 40px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   color: var(--white);
   align-items: start;
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(66, 65, 65, 0.15);
   backdrop-filter: blur(10px);           
   -webkit-backdrop-filter: blur(10px);   
   border: 1px solid rgba(255, 255, 255, 0.3); 
@@ -365,22 +407,42 @@ hr{
 .membership__block-content-down{
   height: 100px;
   width: 100%;
-  background-color: var(--white);
+  
 
-  display: flex;
+/*   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
+  border-radius: 0  0  40px 40px;
+
+}
+.membership__block-content-down button{
+  width: 100%;
+  height: 100%;
+  background: rgb(71, 71, 71);
+ /*  margin: 0;
+  padding: 0; */
+  border: none;
   border-radius: 0  0  40px 40px;
   cursor: pointer;
   font-size: clamp(1rem,1.5vw + 0.5rem ,2rem);
   font-family: 'Bounded-Regular';
-  color: var(--black);
+  color: var(--white);
+  transition: ease .4s;
+
+}
+
+
+
+
+
+.membership__block-content-down button:hover{
+  background-color: var(--pink);
 
 }
 .membership__block-content-up h1{
-  font-size: clamp(2rem,3.5vw + 0.5rem ,4.5rem);
-  font-family: 'Bounded-Regular';
-  color: var(--black);
+  font-size: clamp(1.7rem,3.5vw + 0.5rem ,4.2rem);
+  font-family: 'Bounded-Black';
+  color: var(--white);
   margin: 30px 0;
 }
 .membership__block-content-up ul{
@@ -389,9 +451,9 @@ hr{
   
 }
 .membership__block-content-up ul li{
-color: var(--black);
-font-size: clamp(1.25rem,2vw + 0.5rem ,2.5rem);
-font-family: 'Bounded-ExtraLight';
+color: var(--white);
+font-size: clamp(1.1rem,2vw + 0.5rem ,2.5rem);
+font-family: 'Bounded-Regular';
 line-height: 2;
 letter-spacing: 3px;
 }
@@ -417,7 +479,7 @@ letter-spacing: 3px;
 /* _____________________________________________________________________________________Стили к callBAck */
 .callBack{
  min-height: 100vh;
- min-height: 750px;
+ min-height: 800px;
  display: flex;
  flex-direction: column;
  justify-content: space-around;
