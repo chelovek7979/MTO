@@ -7,9 +7,9 @@
     <link rel="icon" href="./Image/lotus.png">
     <script src="./Home-Page-Style.js" defer></script>
     <link rel="stylesheet" href="./Home-Page-Style.css">
-    <link rel="preload" href="./Font/Bounded-Black.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="./Font/Bounded-Regular.woff" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="./Font/Bounded-ExtraLight.woff2" as="font" type="font/woff2" crossorigin>
+    <!-- <link rel="preload" href="./Font/Bounded-Black.woff2" as="font" type="font/woff2" crossorigin> -->
+    <!-- <link rel="preload" href="./Font/Bounded-Regular.woff" as="font" type="font/woff2" crossorigin> -->
+    <!-- <link rel="preload" href="./Font/Bounded-ExtraLight.woff2" as="font" type="font/woff2" crossorigin> -->
     <link rel="stylesheet" href="/swiper/swiper-bundle.css">
     <link rel="stylesheet" href="./style-Font.css">
     <link rel="stylesheet" href="./media.css">
@@ -17,12 +17,12 @@
 
 <body>
     <header>
-        <video autoplay muted loop playsinline class="header__bg-video" poster="./Image/lotus.png" preload="metadata"">
-            <source type="video/mp4" src="./video/vecteezy_blurred-lights-of-stage-with-laser-rays-light-concert-loop_8813014.mp4" type="video/mp4">
+        <video autoplay muted loop playsinline class="header__bg-video" poster="./Image/lotus.png"  preload="metadata">
+            <source  src="./video/vecteezy_blurred-lights-of-stage-with-laser-rays-light-concert-loop_8813014.mp4" type="video/mp4">
         </video>
         <nav class="header__title">
             <div class="header__title-logo">
-                <img src="./Image/header-logo.png" alt="">
+                <img src="./Image/header-logo.webp" alt="">
             </div>
             <div class="header__title-nav" data-js-header-nav>
                 <ul>
@@ -45,7 +45,7 @@
                     <span></span>
                     <span></span>
                 </div>
-                <img src="./Image/header-user.png" alt="" class="header__title-profile-item">
+                <img src="./Image/header-user.webp" alt="" class="header__title-profile-item">
             </div>
         </nav>
         <div class="header__hero">
@@ -67,7 +67,7 @@
     <main><!-- основная часть страницы -->
         <section class="description">
             <div class="description-back-first">
-                <img src="/Image/lotus-craski.png" alt="">
+                <img src="/Image/lotus-craski.webp" alt="">
             </div>
          
 
@@ -105,7 +105,7 @@
                             </div>
                     </div>
                     <div class="membership__block-photo">
-                        <p>фото</p>
+                        <img src="./Image/mem.jpg" alt="">
                     </div>
                 </div>
             </div>
@@ -125,7 +125,10 @@
                         <div class="membership__block-content-down"> <button>Стать партнёром</button></div>
                     </div>
                     <div class="membership__block-photo">
-                        <p>фото</p>
+                        <video class="hero-video" autoplay muted loop playsinline preload="metadata" >
+                            <source src="/video/special-section.webm" type="video/webm">
+                        </video>
+
                     </div>
                 </div>
             </div>
@@ -156,7 +159,7 @@
                         </div>
                     </form>
                     <div class="callBack__area-img">
-                        <img src="./Image/pushistiy-lotus.png" alt="">
+                        <img src="./Image/pushistiy-lotus.webp" alt="">
                     </div>
                 </div>
             </div>
@@ -176,7 +179,7 @@
         <div class="popup__content">
             <button class="popup__close" data-js-popup-close>x</button>
             <ul class="popup__menu">
-                <li><a href="#">подать заявку как специалист</a></li>
+                <li><a href="#">подать за&shy;явку как спе&shy;циа&shy;лист</a></li>
                 <li><a href="#">подать заявку как участник</a></li>
             </ul>
         </div>

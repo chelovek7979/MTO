@@ -1,16 +1,14 @@
 @font-face {
     font-family: 'Bounded-Regular';
-    src: url('./Font/Bounded-Regular.woff') format('woff2'),
-        url('./Font/Bounded-Regular.woff') format('woff');
+    src: url('./Font/Bounded-Regular.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
 }
-
 @font-face {
     font-family: 'Bounded-ExtraLight';
-    src: url('./Font/Bounded-ExtraLight.woff2') format('woff2'),
-        url('./Font/Bounded-ExtraLight.woff') format('woff');
+    src: url('./Font/Bounded-ExtraLight.woff2') format('woff2'),;
+        
     font-weight: 200;
     font-style: normal;
     font-display: swap;
@@ -18,8 +16,8 @@
 
 @font-face {
     font-family: 'Bounded-Black';
-    src: url('./Font/Bounded-Black.woff2') format('woff2'),
-        url('./Font/Bounded-Black.woff') format('woff');
+    src: url('./Font/Bounded-Black.woff2') format('woff2'),;
+        
     font-weight: 900;
     font-style: normal;
     font-display: swap;

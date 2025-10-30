@@ -30,9 +30,5 @@ document.addEventListener("DOMContentLoaded", () => {
     burger.classList.toggle("active");
   });
 
-  // Клик по затемнению — закрыть меню
-  overlay.addEventListener("click", () => {
-    menu.classList.remove("active");
-    
-  });
+
 });

@@ -111,8 +111,8 @@ gap: 0px;
   height:60px;
   margin: 7px 0;
 }
-
-
+/*_____________________________description */
+.mian__more-item{width: 40%;}
 /*_____________________________membership__block */
 .membership__block-content-up h1{
   text-align: start;
@@ -123,16 +123,10 @@ gap: 0px;
 .membership__block--reverse{background-position: top;}
 .membership__block-content-up {padding: 0;}
 .membership__block__wrapper{grid-template-columns: 1fr 1fr;}
-  
-.membership__block {
- /*  min-height: auto;
-  flex-direction: column; */
-  padding:  0;
-  
-}
-
+.membership__block {padding:  0;}
 /* Вся сетка становится одно-колоночной */
 .membership__block__wrapper {
+  gap: 0;
   display: grid;
   grid-template-columns: 1fr !important;
   grid-template-rows: auto auto auto !important;
@@ -149,54 +143,33 @@ gap: 0px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); 
   border-radius: 40px;
   padding: 40px;
-  gap: 0;
-  
-  
 }
-.membership__block--reverse .membership__block__wrapper {
-  height: 100%;
-}
-
-
-
 .membership__block-content {display: contents !important; }
 .membership__block-content-up {grid-area: content-up;}
-
 .membership__block-content-down {
   grid-area: content-down;
   border-radius:0 0 40px 40px;
   height: auto;
   margin: auto;
 }
-.membership__block-content-down button {
-  height: 70px;
-}
+.membership__block-content-down button {height: 70px;}
 .membership__block-photo {
   grid-area: photo;
   justify-self: center;
   width: 100%;
-  height:107%;
+  height:320px;
   border-radius: 0;
   min-height: 200px;
   border-radius: 40px 40px 0  0 ;
-  overflow: hidden;
-  font-size: clamp(2rem, 8vw, 4rem);
 }
-.membership__block--reverse.membership__block-photo {
-  height:107%;
+.membership__block-photo img,
+.membership__block-photo video{border-radius: 40px 40px 0  0 ;}
+.membership__block--reverse.membership__block-photo {height:107%;}
+.membership__block--ych::before,
+.membership__block--reverse::before {
+ background-size: 300%;
+ background-position: top;
 }
-.callBack__title{
-  width: 100%;
-}
-
-.membership__block--reverse .membership__block__wrapper {
-  grid-template-areas:
-  "content-up"
-  "photo"
-  "content-down";
-  gap: 5px;
-}
-.mian__more-item{width: 40%;}
 
 /*_____________________________Модалка для стать частью мто */
 .popup__content {
@@ -210,20 +183,7 @@ display: none;
 
 /*_____________________________Обратная связь */
 .callBack__area-content {width: 100%;}
-.membership__block--ych::before {
-
- background-size: 300%;
-
- background-position: top;
-
-}
-.membership__block--reverse::before {
-
- background-size: 300%;
-
- background-position: top;
-
-}
+.callBack__title{width: 100%;}
 
 }
 
@@ -242,7 +202,7 @@ display: none;
 .burger {width: 60px;}
 .header__title-nav-pofile{display: block;}
 
-/*_____________________________Основная часть сайта */
+/*_____________________________DEscription */
 .main__more {
   display: flex;
   justify-content: center;
@@ -259,6 +219,26 @@ display: none;
   min-height: 750px;
   justify-content:center;
   gap: 40px;
+}
+.description{
+  margin: 0 auto;
+}
+.description-back-first{
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  /* top: 45%; */
+}
+
+.main__description-item{
+  text-align: left;
+  text-align-last: left;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  word-break: normal;
+  letter-spacing: 0.01em;
+  
 }
 
 
@@ -280,6 +260,20 @@ width: 100%;
 .membership__block-content-up ul li{word-break:  break-all;}
 .membership__block__wrapper {padding:  10px;
 gap: 0;}
+.membership__block{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.membership{gap: 0px;}
+.membership__block{
+  min-height: 100vh;
+  min-height: 750px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  /* margin-top: 30px; */
+}
 
 
 /*_____________________________Модалка для стать частью мто */
@@ -301,30 +295,6 @@ input{height: 60px;}
 .btn--blue span{display: inline;}
 .btn--blue img{display: none;}
 
-.membership__block{
-  
-  
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  
-}
-.membership{
-
-  gap: 0px;
-  /* border: 1px solid red; */
-}
-.membership__block{
-  min-height: 100vh;
-  min-height: 750px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  /* margin-top: 30px; */
-}
-.description{
-  margin: 0 auto;
-}
 
 
 
@@ -334,23 +304,8 @@ input{height: 60px;}
 
 
 
-.description-back-first{
-  position: absolute;
-  z-index: -1;
-  width: 100%;
-  /* top: 45%; */
-}
 
-.main__description-item{
-  text-align: left;
-  text-align-last: left;
-  hyphens: auto;
-  -webkit-hyphens: auto;
-  -ms-hyphens: auto;
-  word-break: normal;
-  letter-spacing: 0.01em;
-  
-}
+
 }
 
 
