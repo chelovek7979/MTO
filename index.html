@@ -5,12 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Молодёжное творческое обьединение</title>
     <link rel="icon" href="./Image/lotus.png">
-    <script src="./Home-Page-Style.js" defer></script>
+
     <link rel="stylesheet" href="./Home-Page-Style.css">
-    <!-- <link rel="preload" href="./Font/Bounded-Black.woff2" as="font" type="font/woff2" crossorigin> -->
-    <!-- <link rel="preload" href="./Font/Bounded-Regular.woff" as="font" type="font/woff2" crossorigin> -->
-    <!-- <link rel="preload" href="./Font/Bounded-ExtraLight.woff2" as="font" type="font/woff2" crossorigin> -->
-    <link rel="stylesheet" href="/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="./swiper/swiper-bundle.css">
     <link rel="stylesheet" href="./style-Font.css">
     <link rel="stylesheet" href="./media.css">
 </head>
@@ -67,7 +64,7 @@
     <main><!-- основная часть страницы -->
         <section class="description">
             <div class="description-back-first">
-                <img src="/Image/lotus-craski.webp" alt="">
+                <img src="./Image/lotus-craski.webp" alt="">
             </div>
          
 
@@ -105,7 +102,27 @@
                             </div>
                     </div>
                     <div class="membership__block-photo">
-                        <img src="./Image/mem.jpg" alt="">
+                        <div class="swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="./photo_community/image_2.webp" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="./photo_community/image_1.webp" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="./photo_community/image_4.webp" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="./photo_community/image_5.webp" alt="">
+                                </div>
+                                
+                                
+                            
+                            </div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -126,7 +143,7 @@
                     </div>
                     <div class="membership__block-photo">
                         <video class="hero-video" autoplay muted loop playsinline preload="metadata" >
-                            <source src="/video/special-section.webm" type="video/webm">
+                            <source src="./video/special-section.webm" type="video/webm">
                         </video>
 
                     </div>
@@ -186,5 +203,7 @@
     </div>
 
 </body>
-<script src="/swiper/swiper-bundle.js"></script>
+<script src="./swiper/swiper-bundle.js" ></script>
+<script src="./Home-Page-Style.js" ></script>
+
 </html>
